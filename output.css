@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+body,
+h1,
+h2,
+p,
+ul,
+li,
+a {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(#1f3756, #141539) center/cover no-repeat;
+  height: 100vh;
+  font-family: "Barlow Semi Condensed", sans-serif;
+}
+
+.score__container {
+  color: #FDFFFF;
+  max-width: 700px;
+  margin: 50px auto;
+  padding: 30px;
+  border: 2px solid #5A6A84;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.score__container h1 {
+  line-height: 26px;
+}
+
+.pickOne {
+  display: flex;
+  max-width: 475px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto;
+  text-align: center;
+}
+.pickOne .circle {
+  width: 170px;
+  height: 170px;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.pickOne .paper {
+  border: 20px solid #506CF4;
+}
+.pickOne .rock {
+  border: 20px solid #DF405E;
+}
+.pickOne .scissors {
+  border: 20px solid #EBA218;
+}
+
+/*# sourceMappingURL=output.css.map */

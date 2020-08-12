@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" href="output.css">
+
   <title>Frontend Mentor | Rock, Paper, Scissors</title>
 
   Score
@@ -16,21 +18,35 @@
   You Win
   You Lose
 
-  Play Again
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
 </head>
+
 <body>
+  <main>
+    <div class="score__container">
+      <h1>Rock<br>Paper<br>Scissors</h1>
+      <div class="score">
+        <span>SCORE</span>
+        <p>00</p>
+      </div>
+    </div>
+
+    <section class="pickOne">
+      <div class="circle paper">
+        <img src="images/icon-paper.svg" alt="paper image">
+      </div>
+      <div class="circle scissors">
+        <img src="images/icon-scissors.svg" alt="scissors image">
+      </div>
+      <div class="circle rock">
+        <img src="images/icon-rock.svg" alt="rock image">
+      </div>
+    </section>
+    <a class="rules">rules</a>
+  </main>
 
 
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="https://www.linkedin.com/in/olalorenarabelo/">Lorena Rabelo</a>.
-  </div>
+
+
 </body>
+
 </html>
