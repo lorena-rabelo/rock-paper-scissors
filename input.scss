@@ -16,7 +16,7 @@ a {
 }
 
 body {
-  background: radial-gradient(hsl(214, 47%, 23%), hsl(237, 49%, 15%)) center/cover no-repeat;
+  background: radial-gradient(#1f3756, #141539) center/cover no-repeat;
   min-height: 100vh;
   font-family: 'Barlow Semi Condensed', sans-serif;
 }
@@ -47,10 +47,11 @@ body {
     padding: 20px 50px;
     border-radius: 8px;
     margin-right: 25px;
+
     span {
       color: #3a41a9;
-      
     }
+
     p {
       font-size: 44px;
       color: #59556e;
@@ -67,6 +68,13 @@ body {
   position: absolute;
   bottom: 30px;
   right: 30px;
+
+  &:hover {
+    cursor: pointer;
+    color: #fff;
+    border-color: #fff;
+    transition: .4s;
+  }
 }
 
 .pickOne {
@@ -76,7 +84,7 @@ body {
   justify-content: space-between;
   margin: 0 auto;
   text-align: center;
-  background: url("images/bg-triangle.svg")  center no-repeat;
+  background: url("images/bg-triangle.svg") center no-repeat;
 
   .circle {
     width: 170px;
@@ -94,11 +102,37 @@ body {
     border: 20px solid #506CF4;
   }
 
-  .rock {
-    border: 20px solid #DF405E;
-  }
-
   .scissors {
     border: 20px solid #EBA218;
   }
+
+  .rock {
+    border: 20px solid #DF405E;
+    margin: 25px auto;
+  }
 }
+
+.modal__container {
+  background-color: #FDFFFF;
+  width: 400px;
+  height: 420px;
+  // margin: -50px auto 0;
+  padding: 40px;
+  z-index: 10;
+  border-radius: 12px;
+  text-align: center;
+  // display: none;
+  position: absolute;
+  right: calc((100vw - 400px) / 2);
+  top: calc((100vh - 470px) / 2)
+ }
+
+.modal {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+
+}
+    .modal__img {
+      margin-top: 50px;
+    }
