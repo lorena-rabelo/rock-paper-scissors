@@ -111,12 +111,16 @@ body {
   position: absolute;
   right: calc((100vw - 400px) / 2);
   top: calc((100vh - 470px) / 2);
+  display: none;
 }
 
 .modal {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
+}
+.modal .close {
+  cursor: pointer;
 }
 
 .modal__img {
