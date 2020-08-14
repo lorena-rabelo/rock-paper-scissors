@@ -152,15 +152,25 @@ body {
 
 .secondary {
   display: none;
-  justify-content: center;
+  // justify-content: center;
   color: #FDFFFF;
   text-transform: uppercase;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
-.blur {
-
-  
+.blur {  
   opacity: 0.5;
 	transition-property: opacity;
+}
 
+.transform {
+  transform: scale(1.5);
+  margin-top: 80px;
+}
+
+.you-picked {
+  width: 50%;
+  margin-right: auto;
+  text-align: center;
 }

@@ -20,12 +20,10 @@ rules.onclick = () => {
   main.classList.add('blur')
 }
 
-closeModal.onclick = () =>{ 
+closeModal.onclick = () => {
   modal.style.display = 'none'
   main.classList.remove('blur')
 }
-
-
 
 paper.onclick = () => {
   personPicked = paper;
@@ -50,12 +48,16 @@ function displayPicked() {
   whoWin.style.display = 'none'
   let housePickedContainer = document.querySelector('.house-picked');
   let youPickedContainer = document.querySelector('.you-picked');
-  setTimeout( function() {
-    console.log( 'Executa uma vez após 5 segundo.' );
+  setTimeout(function () {
+    personPicked.classList.add('transform')
     youPickedContainer.innerHTML = youPickedContainer.innerHTML + personPicked.outerHTML;
-  }, 500 );
+  }, 400);
+  setTimeout(function () {
+    housePicked.classList.add('transform')
+    housePickedContainer.innerHTML = housePickedContainer.innerHTML + housePicked.outerHTML;
+  }, 800);
   // Add the old content with the new content so innerHTML won't override the old content.
-  housePickedContainer.innerHTML = housePickedContainer.innerHTML + housePicked.outerHTML;
+
 }
 
 
