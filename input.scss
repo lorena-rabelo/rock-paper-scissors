@@ -85,32 +85,40 @@ body {
   margin: 0 auto;
   text-align: center;
   background: url("images/bg-triangle.svg") center no-repeat;
-
-  .circle {
-    width: 170px;
-    height: 170px;
-    background-color: #E9E9E9;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    // border: 20px solid white;      
-  }
-
-  .paper {
-    border: 20px solid #506CF4;
-  }
-
-  .scissors {
-    border: 20px solid #EBA218;
-  }
-
-  .rock {
-    border: 20px solid #DF405E;
-    margin: 25px auto;
-  }
 }
+
+.circle {
+  width: 170px;
+  height: 170px;
+  background-color: #E9E9E9;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  // border: 20px solid white;  
+  box-shadow: inset 0px 6px 2px #B8BED6;
+}
+
+// usar mixin para as sombras
+
+
+.paper {
+  border: 20px solid #506CF4;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.scissors {
+  border: 20px solid #EBA218;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
+.rock {
+  border: 20px solid #DF405E;
+  margin: 25px auto;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.8);
+}
+
 
 .modal__container {
   background-color: #FDFFFF;
@@ -125,6 +133,7 @@ body {
   right: calc((100vw - 400px) / 2);
   top: calc((100vh - 470px) / 2);
   display: none;
+
 }
 
 .modal {
@@ -133,7 +142,7 @@ body {
   align-items: baseline;
 
   .close {
-    cursor: pointer;  
+    cursor: pointer;
   }
 }
 
@@ -141,3 +150,17 @@ body {
   margin-top: 50px;
 }
 
+.secondary {
+  display: none;
+  justify-content: center;
+  color: #FDFFFF;
+  text-transform: uppercase;
+}
+
+.blur {
+
+  
+  opacity: 0.5;
+	transition-property: opacity;
+
+}

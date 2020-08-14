@@ -79,7 +79,8 @@ body {
   text-align: center;
   background: url("images/bg-triangle.svg") center no-repeat;
 }
-.pickOne .circle {
+
+.circle {
   width: 170px;
   height: 170px;
   background-color: #E9E9E9;
@@ -88,16 +89,23 @@ body {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  box-shadow: inset 0px 6px 2px #B8BED6;
 }
-.pickOne .paper {
+
+.paper {
   border: 20px solid #506CF4;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.8);
 }
-.pickOne .scissors {
+
+.scissors {
   border: 20px solid #EBA218;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.8);
 }
-.pickOne .rock {
+
+.rock {
   border: 20px solid #DF405E;
   margin: 25px auto;
+  box-shadow: 0px 10px 0px rgba(0, 0, 0, 0.8);
 }
 
 .modal__container {
@@ -125,6 +133,18 @@ body {
 
 .modal__img {
   margin-top: 50px;
+}
+
+.secondary {
+  display: none;
+  justify-content: center;
+  color: #FDFFFF;
+  text-transform: uppercase;
+}
+
+.blur {
+  opacity: 0.5;
+  transition-property: opacity;
 }
 
 /*# sourceMappingURL=output.css.map */
