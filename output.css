@@ -137,10 +137,14 @@ body {
 
 .secondary {
   display: none;
+  justify-content: space-between;
   color: #FDFFFF;
   text-transform: uppercase;
-  max-width: 700px;
+  max-width: 600px;
   margin: 0 auto;
+}
+.secondary .expand {
+  max-width: 800px;
 }
 
 .blur {
@@ -154,9 +158,30 @@ body {
 }
 
 .you-picked {
-  width: 50%;
   margin-right: auto;
   text-align: center;
+}
+
+.house-picked {
+  text-align: center;
+  margin-left: auto;
+}
+
+.whoWin {
+  align-self: center;
+  text-align: center;
+}
+.whoWin h2 {
+  font-size: 40px;
+}
+.whoWin .play-again {
+  padding: 20px 60px;
+  border-radius: 8px;
+  background-color: #fafafa;
+  color: #1f3756;
+  font-size: 12px;
+  text-transform: uppercase;
+  margin-top: 25px;
 }
 
 /*# sourceMappingURL=output.css.map */
