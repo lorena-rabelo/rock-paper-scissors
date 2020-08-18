@@ -53,14 +53,17 @@ rock.onclick = () => {
   personPicked = rock;
   pickOne.style.display = 'none'
   displayPicked()
-  displayWinner()
+  setTimeout(displayWinner, 1400);
+  setTimeout(teste, 1400);
+
 };
 
-function displayPicked() {  
+let housePickedContainer = document.querySelector('.house-picked');
+let youPickedContainer = document.querySelector('.you-picked');
+
+function displayPicked() {
   secondary.style.display = 'flex';
   whoWin.style.display = 'none'
-  let housePickedContainer = document.querySelector('.house-picked');
-  let youPickedContainer = document.querySelector('.you-picked');
   setTimeout(function () {
     personPicked.classList.add('transform')
     // Add the old content with the new content so innerHTML won't override the old content
@@ -70,42 +73,60 @@ function displayPicked() {
     housePicked.classList.add('transform')
     housePickedContainer.innerHTML = housePickedContainer.innerHTML + housePicked.outerHTML;
   }, 800);
-  setTimeout(function displayWinner (){
-    whoWin.style.display = 'block'
-  }, 1400); 
   
 }
 
-function displayWinner(){
-let whoWinText = document.querySelector('.whoWin--text')
-let buttonReplay = document.querySelector('.play-again')
 
-console.log(buttonReplay);
+function reset() {
+  const pickedCircles = document.querySelectorAll('.secondary .circle');
+  for (circle of pickedCircles) {
+    circle.parentNode.removeChild(circle);
+  }
 
-	if(	
-		personPicked === paper && housePicked === paper ||
-		personPicked === scissors && housePicked === scissors ||
-		personPicked === rock && housePicked === rock)
-	{
-		whoWinText.textContent = 'It is a tie';
-	}
-	else if(personPicked === paper && housePicked === scissors ||
-			personPicked === scissors && housePicked === rock ||
-			personPicked === rock && housePicked === paper)
-	{
-		whoWinText.textContent = 'You Lose!';
-		score--;
-		displayScore.textContent = score;
-    localStorage.setItem('score', score)
-    buttonReplay.classList.add('lost')
-	}
-	else if(personPicked === paper && housePicked === rock ||
-			personPicked === scissors && housePicked === paper||
-			personPicked === rock && housePicked === scissors)
-	{
-		whoWinText.textContent = 'You win';
-		score++;
-		displayScore.textContent = score;
-		localStorage.setItem('score', score)
-	}
+  secondary.style.display = 'none';
+  personPicked.classList.remove('transform')
+  housePicked.classList.remove('transform')
+  pickOne.style.display = 'flex'
+
+  // Reasign random value 
+  random = Math.floor(Math.random() * 3);
+  housePicked = arr[random];
+
+}
+
+const btnReplay = document.querySelector('.play-again')
+btnReplay.addEventListener('click', reset)
+
+function displayWinner() {
+  setTimeout(() => {
+    whoWin.style.display = 'block'
+    secondary.classList.add('expand')
+  }, 1000)
+
+
+  let whoWinText = document.querySelector('.whoWin--text')
+
+  if (
+    personPicked === paper && housePicked === paper ||
+    personPicked === scissors && housePicked === scissors ||
+    personPicked === rock && housePicked === rock) {
+    whoWinText.textContent = 'It is a tie';
+  }
+  else if (personPicked === paper && housePicked === scissors ||
+    personPicked === scissors && housePicked === rock ||
+    personPicked === rock && housePicked === paper) {
+    btnReplay.classList.add('lost')
+    whoWinText.textContent = 'You Lose!';
+    // score--;
+    // displayScore.textContent = score;
+    // localStorage.setItem('score', score)
+  }
+  else if (personPicked === paper && housePicked === rock ||
+    personPicked === scissors && housePicked === paper ||
+    personPicked === rock && housePicked === scissors) {
+    whoWinText.textContent = 'You win';
+    // score++;
+    // displayScore.textContent = score;
+    // localStorage.setItem('score', score)
+  }
 }
